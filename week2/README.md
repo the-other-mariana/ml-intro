@@ -26,15 +26,27 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 ### Exercise 1: Regression (predictions to what will happen tomorrow, real data, probabilities)
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex01.PNG?raw=true)
+
 ### Exercise 2: Classification (whether it will rain or not)
+
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex02.PNG?raw=true)
 
 ### Exercise 3: Classification (whether an account is weak or not)
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex03.PNG?raw=true)
+
 ### Exercise 4: b) and c) Non-supervised
+
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex04.PNG?raw=true)
 
 ### Exercise 5: a) and d) Supervised
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex05.PNG?raw=true)
+
 ### Exercise 6: b) and c)
+
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex06.PNG?raw=true)
 
 ----
 
@@ -42,7 +54,9 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 - A model (line) that adjusts to given data in order to make predictions. If a system of costs and area: Given the area, you will now the cost of that house, for example. All the costs are subject to area.
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-01.PNG?raw=true)
 
+### The Model
 
 - The line is the best adjustment to data, and it will serve as a model for future houses (data not part of training data).
 
@@ -50,7 +64,9 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
     - y is the real price, h is the hypothesis one.
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-02.PNG?raw=true)
 
+### Cost Function
 
 - J(a_0, a_1) is a function measures the **error** of a line according to its training data. The error is the difference between y and h values, that is, the J function estimates the difference between a real price and the predicted one. It involves a squared term in order to
 
@@ -60,9 +76,11 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 In the image below, x axis **a** is a vector that contains a_0 and a_1.
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-03.PNG?raw=true)
 
 - The error behaves as a Unimodal (one mode, max or min value) convex equation (J) and therefore can be minimized, which is our objective: find the a_0, a_1 values that generate the reduce error (J).
+
+### Descendent Gradient
 
 - **Descendent Gradient** is the method that find these a_0, a_1 minimize the J function.
 
@@ -70,3 +88,13 @@ In the image below, x axis **a** is a vector that contains a_0 and a_1.
 
     - Beta factor: learning factor. It is a constant parameter that you configure at the start. It works for accelerating/slowing down the search of a_0 and a_1.
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-04.PNG?raw=true)
+
+
+## In Code
+
+Source: https://github.com/the-other-mariana/ml-intro/blob/master/week2/regression.m
+
+### Example Data
+
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/out.png?raw=true)
