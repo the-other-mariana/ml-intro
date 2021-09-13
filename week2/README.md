@@ -44,7 +44,7 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex05.PNG?raw=true)
 
-### Exercise 6: b) and c)
+### Exercise 6: b)
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/ex06.PNG?raw=true)
 
