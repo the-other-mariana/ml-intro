@@ -8,7 +8,7 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 (Linear) tell whether or not data follows a line, and if it does, get the equation and therefore estimate further data using that line.
 
-- Anything for prediction is supervised: you construct the model with previous data and tomorrow you will **validate**.
+- Anything for prediction is supervised: you construct the model with **previous data (known data)** and tomorrow you will **validate**.
 
 ## Clustering (Non-Supervised)
 
@@ -18,9 +18,9 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 - Depending on the clustering technique, the centroid can be defined. You also can determine how many centroids or groups, so output can differ.
 
-- **supervised** and **non-supervised** are learning/training techniques.
+- **Supervised** and **Non-supervised** are learning/training techniques.
 
-- New information is generated
+- New information is generated: grouping information into categories that didn't exist before.
 
 ----
 
@@ -95,6 +95,6 @@ In the image below, x axis **a** is a vector that contains a_0 and a_1.
 
 Source: https://github.com/the-other-mariana/ml-intro/blob/master/week2/regression.m
 
-### Example Data
+### Example Training Data
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/out.png?raw=true)
