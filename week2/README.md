@@ -80,13 +80,13 @@ In the image below, x axis **a** is a vector that contains a_0 and a_1.
 
 - The error behaves as a Unimodal (one mode, max or min value) convex equation (J) and therefore can be minimized, which is our objective: find the a_0, a_1 values that reduce the most the error (J).
 
-### Descendent Gradient
+### Gradient Descent
 
-- **Descendent Gradient** is the method that find these a_0, a_1 that minimize the J function.
+- **Gradient Descent** is the method that find these a_0, a_1 that minimize the J function.
 
-    - Requirements: Unimodal and second-derivative exists.
+    - Requirements: Unimodal funtion and its second-derivative existing.
 
-    - Beta factor: learning factor. It is a constant parameter that you configure at the start. It works for accelerating/slowing down the search of a_0 and a_1.
+    - Beta factor: learning factor. It is a constant parameter that you configure at the start of the learning process. It works for accelerating/slowing down the search of a_0 and a_1.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-04.PNG?raw=true)
 
