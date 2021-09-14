@@ -60,7 +60,7 @@ Find a model (curve) that separates or determines whether a point lies in one ca
 
 - The line is the best adjustment to data, and it will serve as a model for future houses (future or new data not part of training data).
 
-- h is the hypothesis for each data x_i. Supervised because you have real training data.
+- h is the hypothesis for each data x_i. This model is Supervised because you have real training data.
 
     - y is the real price, h is the hypothesis one.
 
@@ -68,7 +68,7 @@ Find a model (curve) that separates or determines whether a point lies in one ca
 
 ### Cost Function
 
-- J(a_0, a_1) is a function measures the **error** of a line according to its training data. The error is the difference between y and h values, that is, the J function estimates the difference between a real price and the predicted one. It involves a squared term in order to
+- J(a_0, a_1) is a function that measures the **error** of a line according to its training data. The error is the difference between y and h values, that is, the J function estimates the difference between a real price and the predicted one. It involves a squared term in order to:
 
     1. Eliminate negative differences
 
@@ -78,11 +78,11 @@ In the image below, x axis **a** is a vector that contains a_0 and a_1.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week2/res/reg-03.PNG?raw=true)
 
-- The error behaves as a Unimodal (one mode, max or min value) convex equation (J) and therefore can be minimized, which is our objective: find the a_0, a_1 values that generate the reduce error (J).
+- The error behaves as a Unimodal (one mode, max or min value) convex equation (J) and therefore can be minimized, which is our objective: find the a_0, a_1 values that reduce the most the error (J).
 
 ### Descendent Gradient
 
-- **Descendent Gradient** is the method that find these a_0, a_1 minimize the J function.
+- **Descendent Gradient** is the method that find these a_0, a_1 that minimize the J function.
 
     - Requirements: Unimodal and second-derivative exists.
 
