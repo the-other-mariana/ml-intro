@@ -2,7 +2,7 @@
 
 ## Classification (Supervised)
 
-Find a model (curve) that separates or determines wether a point lies in one category or another. We test whether a data is part of a class or not.
+Find a model (curve) that separates or determines whether a point lies in one category or another. We test whether a data is part of a class or not.
 
 ## Regression (Supervised)
 
@@ -58,7 +58,7 @@ Find a model (curve) that separates or determines wether a point lies in one cat
 
 ### The Model
 
-- The line is the best adjustment to data, and it will serve as a model for future houses (data not part of training data).
+- The line is the best adjustment to data, and it will serve as a model for future houses (future or new data not part of training data).
 
 - h is the hypothesis for each data x_i. Supervised because you have real training data.
 
