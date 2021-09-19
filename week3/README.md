@@ -44,11 +44,11 @@ Source Code (both equivalent verions):
 
 ### Regression
 
-![image](https://github.com/the-other-mariana/ml-intro/blob/master/week3/res/out-m.png?raw=true)
+![image](https://github.com/the-other-mariana/ml-intro/blob/master/week3/res/outm.png?raw=true)
 
 ### Error (J)
 
-![image](https://github.com/the-other-mariana/ml-intro/blob/master/week3/res/error-m.png?raw=true)
+![image](https://github.com/the-other-mariana/ml-intro/blob/master/week3/res/errorm.png?raw=true)
 
 - Python: https://github.com/the-other-mariana/ml-intro/blob/master/week3/regression.py
 
