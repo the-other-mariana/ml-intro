@@ -31,13 +31,15 @@ The majority of problems that need ML are multivariate: the house price is based
 
 where i is the training data index and x_0 = 1. 
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/01.png?raw=true)
+
 The equation for multivariate regression in expanded form would be:
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/02.PNG?raw=true)
 
 We can add to the information matrix (table) a column that corresponds to what would be x_0, and is composed of only 1's, so that the dimensions of vector **a** transposed (1 x n + 1) can be multiplied by this **x** column vector (n + 1 x 1). Thus, the equation of multivariate regression in compressed vectorial form results in:
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/03.PNG?raw=true)
 
 Where vector **a** contains the initial hypothesis values defined by the user. The result of the equation is a hypothesis vector **h**, which is the anticipated result from the multiplication of **a** and **x**, for **each** of the training vectors (table rows). 
 
@@ -52,24 +54,27 @@ h_a(x^1) = [1, 0, 0, 1, 1] * [1, 62, 1, 1, 1].transposed() = 1(1) + 1(62) + 0 + 
 
 ### Another Example
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/06.png?raw=true)
 
 ### Cost Function
 
 - Univariate Linear Regression, Cost Function:
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/07.png?raw=true)
 
 - Multivariate Linear Regression, Cost Function:
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/08.png?raw=true)
 
 Now, J depends on vector **a**, where this vector contains [a_0, a_1, ..., a_n].
 
 ### Example
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/09.png?raw=true)
+
 Let's code it to see if J = 0.09 is correct.
 
-Source Code: 
+Source Code: https://github.com/the-other-mariana/ml-intro/blob/master/week4/multivariateLinearRegression.m
 
 Which outputs an h vector as:
 
@@ -84,9 +89,11 @@ J = 0.093750
 
 - Univariate Linear Regression
 
-
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/04.png?raw=true)
 
 - Multivariate Linear Regression
+
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week4/res/05.png?raw=true)
 
 
 
