@@ -19,8 +19,8 @@ ax1.scatter(x, y, s=100, color='yellow',marker="o", linewidths=1, edgecolor='bla
 
 a0 = 0.0
 a1 = 0.0
-beta = 0.001
-iterMax = 500
+beta = 0.023
+iterMax = 600
 
 m = len(x)
 iter = 1
@@ -63,8 +63,10 @@ ax2.set_ylabel("Error (J)")
 ax2.set_xlabel("Iterations")
 
 # plot test data and output
-input_data = 20
+input_data = 9.7687
 output_h = a0 + a1 * input_data
 ax1.scatter([input_data], [output_h], marker='o', color='magenta', s=100, linewidths=1, zorder=100, edgecolor='black')
 
 plt.show()
+
+print(f"\n\n\n J = {J} a0 = {a0} a1 = {a1} \n Test:\n x = {input_data} y = 7.5435 h = {output_h}\n")

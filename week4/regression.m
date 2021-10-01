@@ -22,8 +22,8 @@ hold on
 
 a0 = 0; % 1
 a1 = 0; % 1
-beta = 0.01; % change this
-iterMax = 3000; % change this
+beta = 0.023; % change this
+iterMax = 600; % change this
 
 % size of training data
 m = numel(x);
@@ -58,11 +58,9 @@ xlabel("Number of Iterations")
 ylabel("Error J")
 title("Convergence Plot")
 
-J
-a0
-a1
-
-input_data = 20; % must be normalized as well
-output_h = a0 + a1*input_data
+input_data = 9.7687; % must be normalized as well
+output_h = a0 + a1*input_data;
 figure(1)
 plot(input_data, output_h, 'ok', 'MarkerFaceColor', 'm', 'MarkerSize', 8) 
+
+fprintf('J = %.4f a0 = %.4f a1 = %.4f \nTest: \nx = %.4f y= 7.5435 h = %.4f \n', J, a0, a1, input_data, output_h)
