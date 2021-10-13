@@ -26,25 +26,23 @@ Now, the Cost Funtion is an error function, that when talking about univariate l
 
 In the case of multivariate linear regression, J (error) depends now on vector **a**, which has more than two elements, becoming multivariate. Both hypotheses h in ULR and MLR end up being a single number per training data x_i, but the way we reach this h(x_i) changes as we saw before.
 
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/04.png?raw=true)
+
 ### Updating The Parameters of a
 
 In ULR we updated in each iteration the values of a_0 and a_1 using the technique of the Gradient Descent:
 
-![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/04.png?raw=true)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/05.png?raw=true)
 
 where each value a_j was updated using a learning factor beta and the partial derivative of J(a_0, a_1) with respect to a_j, and j = {0, 1}.
 
 Now, in MLR the Gradient Descent looks very similar, we still update each a_j with a learning factor beta and the partial derivative of J(**a**) with respect to a_j, but with j = {0, ..., n}. This means that we must differentiate J(**a**) with respect to each a_j to update each a_j.
 
-![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/05.png?raw=true)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/06.png?raw=true)
 
 If we take a look at the derivatives of J(**a**) with respect to a_j, we notice that the only thing that changes between a_j's is the term x_i,j. In other words, if we are doing a_1 for training data i, we will multiply it by x_i,1. j iterates the characteristics and i the training data values.
 
-We will have an a value for each characteristic, if we include x_0 = 1.
-
-![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/06.png?raw=true)
-
-which for a_0 would be
+We will have an a value for each characteristic, if we include x_0 = 1. Thus, for a_0 would be
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/08.png?raw=true)
 
