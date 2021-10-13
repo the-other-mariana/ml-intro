@@ -21,7 +21,7 @@ title("Data Plot")
 
 a = zeros(n,1); % column vector
 beta = 0.00000001; % first you config beta at the end of first try
-iterMax = 150; % second you config beta at the end of first try and after beta adjust
+iterMax = 150; % second you config iters at the end of first try and after beta adjust
 
 iter = 1;
 
@@ -33,7 +33,7 @@ for i=1:m
   h(i) = a'*x(i,:)';
 end
 
-% sum sums all vector elements
+% sum() sums all vector elements
 % . for element by element operation
 J = (1/(2*m))*sum(((h - y).^2));
 conv = [];
