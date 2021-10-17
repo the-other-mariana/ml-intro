@@ -4,7 +4,7 @@ Last time, what we did involved a MLR with a beta value very small (0.00000001) 
 
 The problem with these adjustments was because of the **input data**. Consider the image:
 
-![img](02)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/02.png?raw=true)
 
 The input data plotted shows that for characteristic x_2 the range is [0,5] and for characteristic x_1 [0,5000]. These ranges between characteristics differ significantly. This difference is quite inconvenient: 
 
@@ -16,7 +16,7 @@ Thus, in order to have a balanced model, we need that **all characteristics infl
 
 > Note: the J error function has a parabola form, and during the learning process, as the **a** vector is optimized, the error J is approaching the lowest part of the parabola. If we have an enormous amount of iterations, can **a** pass the lowest point and go to the other high side of the parabola? The answer is no, no matter the iterations, **a** cannot increase again once the lowest point is reached. This is because once **a** reaches the lowest point (optimized), the gradient (slope) with which **a** is updated in each iteration is cero or almost cero, and the output for J, which is **a** updated, is not changing due to this small gradient. It updates with almost cero change, and J also moved along the parabola with almost cero change and so on.
 
-![img](03)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/03.png?raw=true)
 
 > Note: at the end, the value of J might reach a very big amount (1e10), which might look strange but it's important to note that **J value is the average of the quadratic error sum of all iterations**, it is not a +/- value that you can add/substract to the final predicted test value because it does not represent a confidence interval. J is normally big, even with normalized data. There are other metric for computing a +/- error.
 
@@ -28,11 +28,11 @@ Therefore, we need to apply a normalization transformation in order to get a coh
 
 Where the mean and standard deviation used for x_i are computed for **each feature** (column), and therefore it is a computation of **samples**.
 
-![img](04)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/04.png?raw=true)
 
 Important: x_0 column should not be normalized. Now, we can see the training data normalized:
 
-![img](01)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/01.png?raw=true)
 
 We can see that after the standard normalization, the training data has for each characteristic almost the same range of values. Also, as seen in the image, the transformation does not affect the structure of the data, does **not affect the original data distribution**, the only thing that is affected is the range of values of each feature. 
 
@@ -40,11 +40,11 @@ We can see that after the standard normalization, the training data has for each
 
 We used to have a beta value very small (0.00000001), and if we increased it to 0.1, for example, the J error diverged because beta was so big that the **a** values made the parabola reach infinites. Now, after normalization, we can have easily a beta = 0.1 and it converges to a small J error. It converges in a very short time (40 iterations), with a smaller final J, as well as having a reasonable beta value.
 
-![img](05)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/05.png?raw=true)
 
 We see at the end that with beta = 0.1 the model ends up as follows (plane).
 
-![img](06)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/06.png?raw=true)
 
 ## Conclusions
 
