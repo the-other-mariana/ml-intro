@@ -86,7 +86,7 @@ For the next try, the config is b = 0.000001 and iterMax = 10.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/b000001it10.PNG?raw=true)
 
-For the next try, the config is b = 0.000000001 and iterMax = 10.
+For the next try, the config is b = 0.000000001 and iterMax = 10. This output line means that the error has not finished decreasing, the learning process has not finished entirely. We can do two things: either increase beta so that steps to the optimized **a** are larger, or give it more time so that with small steps the optimal **a** is reached.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/b000000001it10.PNG?raw=true)
 

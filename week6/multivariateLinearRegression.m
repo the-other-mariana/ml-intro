@@ -1,4 +1,4 @@
-% code for linear regression
+% code for multivariate linear regression w/o normalization
 
 close all % close windows
 clear all % clear variables
@@ -56,4 +56,3 @@ plot(conv, 'b')
 xlabel("No. of Iterations")
 ylabel("Convergence")
 title("Convergence Plot")
-
