@@ -2,11 +2,11 @@
 
 Last time, what we did involved a MLR with a beta value very small (0.00000001) and we increased also the number of iterations (150), so that error J was decreased the most.
 
-The problem with these adjustments was because of the **input data**. Consider the image:
+The problem with these adjustments was because of the **training data**. Consider the image:
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week7/res/02.png?raw=true)
 
-The input data plotted shows that for characteristic x_2 the range is [0,5] and for characteristic x_1 [0,5000]. These ranges between characteristics differ significantly. This difference is quite inconvenient: 
+The training data plotted shows that for characteristic x_2 the range is [0,5] and for characteristic x_1 [0,5000]. These ranges between characteristics differ significantly. This difference is quite inconvenient: 
 
 1. Slows down the process of searching for an optimal **a** vector.
 
@@ -22,7 +22,7 @@ Thus, in order to have a balanced model, we need that **all characteristics infl
 
 Before, we had a beta value very small (0.00000001), which means that each iteration's update on **a** are very small, which means a slow learning process to reach the optimized values of **a**, and error J might stay at a reducible point at the end of the iterations, because we did not have spare time to refine the error.
 
-Therefore, we need to apply a normalization transformation in order to get a coherent model in less time. The normalization that we will apply is the **standard normalization**, where the trasnformation to each training data value of each characteristic is:
+Therefore, we need to apply a normalization transformation in order to get a coherent/balanced model in less time. The normalization that we will apply is the **standard normalization**, where the trasnformation to each training data value of each characteristic is:
 
 ![\Large x'_{i}=\frac{x_{i}-\overline{X}}{S}](https://latex.codecogs.com/svg.latex?\Large&space;x'_{i}=\frac{x_{i}-\overline{X}}{S})
 
@@ -60,6 +60,6 @@ We see at the end that with beta = 0.1 the model ends up as follows (plane).
 
     - Accelerate the learning process.
 
-    - Balance the influence of all features eaully in the final model.
+    - Balance the influence of all features equally in the final model.
 
 - To get a better model, instead of constant maximum number of iterations (1) or checking if an error is smaller than a constant threshold (2), we can better stop the process when the **error stops changing (difference either 0 or eps)** (3). These three are the different stop criteria.
