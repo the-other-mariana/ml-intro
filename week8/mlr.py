@@ -14,7 +14,7 @@ x = [[float(v) for v in array] for array in x]
 y = np.array(y)
 x = np.array(x)
 
-
+# initial parameters
 a = np.zeros(n, dtype=float)
 beta = 0.1
 iterMax = 100
@@ -41,7 +41,7 @@ for i in range(m):
     h[i] = np.matmul(a, x[i, :])
 
 sums = [(h_val - y_val)**2 for h_val, y_val in zip(list(h), list(y))]
-J = (1.0 / 2.0 * m) * sum(sums)
+J = (1.0 / (2.0 * m)) * sum(sums)
 conv = [] # convergence vector
 last_J = 0.0
 eps = 2.2204e-16
@@ -55,7 +55,7 @@ while(1):
     for i in range(m):
         h[i] = np.matmul(a, x[i, :])
     sums = [(h_val - y_val) ** 2 for h_val, y_val in zip(list(h), list(y))]
-    J = (1.0 / 2.0 * m) * sum(sums)
+    J = (1.0 / (2.0 * m)) * sum(sums)
     if last_J - J <= eps:
         break
     conv.append(J)
@@ -72,5 +72,6 @@ h_input = np.matmul(a, norm_input)
 print("The J Error:", J)
 print("Total Iterations:", iter)
 print("Input Hypothesis", h_input)
+print("Vector a:", a)
 
 
