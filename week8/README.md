@@ -16,7 +16,7 @@
 
 - **Binary Classification**: it is a classification problem where we only have two possible classes where a data point can belong to.
 
-![img](1)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/1.png?raw=true)
 
 In this case, a data point belongs to one class or another depending on its values for all its features, in this course, 2.
 
@@ -28,13 +28,13 @@ The line in a Logistic Regression model is called the **decision line** or **dec
 
 The model in Logistic Regression is:
 
-![img](2)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/2.png?raw=true)
 
 If we look at the model, we can see that without the **g()** the model is the same as linear regression (**a**' * **x**), because in both we use a line. Now, **a**' * **x** is transformed with a **g** function. But, **what is g?**
 
 A Logistic Regression problem is not the same as a Linear Regression problem, in the sense that the error does not produce a curve J as in linear regression, where the error was a convex and unimodal (one minimum/maximum) curve J. In a Logistic Regression problem, the error behaves differently: we have a function J that has a lot of local minimums. We do have a global minimum (lowest point), though.
 
-![img](3)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/3.png?raw=true)
 
 What does this imply? Having many local minimum points makes the **gradient descent** not to work, because the gradient descent as we knew it **cannot go further when a zero slope is found**, meaning that it would output the first local minimum found to be the global minimum, which is mistaken. Because **a** is random, the initial J can fall in different local minimum slopes, but the gradient descent will get stuck on the first zero slope it finds, whether is the real global minimum or not. 
 
@@ -57,7 +57,7 @@ Thus, if the correct output of the current data point is y = 1 (class 1), becaus
 
 So, if the current data point belongs to y = 1, we would expect that the hypothesis h outputs 1 as well, and in this situation **the error is 0**. But if in the same data point analysis the hypothesis h outputs a 1, **the error should be inflated** because the prediction is wrong according to its y. This provokes a function:
 
-![img](4)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/4.png?raw=true)
 
 *Note: The hypothesis h belongs to all real numbers between 0 and 1, so it is not discrete but continuous.*
 
@@ -65,23 +65,23 @@ With this function, the gradient descent now can reach the global minimum at the
 
 What happens if we got y = 0? We have **another J error function**. If the current data point analysed is y = 0 class, then we expect that h outputs 0 where the error J would also mean zero. As h gets near 1, the error becomes infinite. This provokes another function:
 
-![img](5)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/5.png?raw=true)
 
 Therefore, we have 2 error J functions, how do we merge them into one where the gradient descent is able to find the global minimum depending on y? The iterative process here is also concerned with updating **a** because it will update h accordingly.
 
 **Conclusion 1: Hypothesis h must be between 0 and 1**. In linear regression, hypothesis h for each point was not between [0,1], it was between [-inf, +inf]. Thus, we need to transform the hypothesis that the line **a**' * **x** generates between [-inf, +inf] to a value between [0,1] in order to be able to determine the prediction of classes 0 and 1. The function that does this transformation froom [-inf, +inf] to [0, 1] is **g function**, also known as **Sigmoid Function**:
 
-![img](6)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/6.png?raw=true)
 
 The sigmoid function, where z =  **a**' * **x**, has the equation:
 
-![img](7)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/7.png?raw=true)
 
 Here, g(z) can be thought of as h. The Sigmoid Function has asymptote on 0 (lower limit) when z is very small and asymptote on 1 (higher limit) when z is very large, where z is the x-axis. Once h is transformed to [0, 1] we can use the new J functions.
 
 Notice that the sigmoid function passes through 0.5 when z = 0. This allows us to take the decision: if z has values [0, +inf], h will output a value between [0.5, 1]; if has values [-inf, 0] then h will output a value between [-1, 0.5]. With h taking this values now, we can apply the following **rule to identify whether a value belongs to class 0 or 1 based on h**:
 
-![img](8)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/8.png?raw=true)
 
 where y' is the predicted class.
 
@@ -93,15 +93,15 @@ An exact h = 0.5 means that the data point is probably touching the model line. 
 
 **Conclusion 2: Hypothesis h must be between 0 and 1 so that we can use a new J function that can be minimized with Gradient Descent**. We reached the conclusion of having two J error functions, one for each behaviour when y changes from 0 to 1:
 
-![img](9)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/9.png?raw=true)
 
 The objective of the training iterations is once again **to modify a** so that we modify h so that we minimize the J function. The objective of the J function is to help minimize using the values of transformed h. How do we unify these functions into one J error function?
 
-![img](10)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/10.png?raw=true)
 
 The left component corresponds to the first funtion, when y = 1; and the right component corresponds to the second behaviour, when y = 0. As y changes with each data point, the corresponding component of this function will be turned on, while the other will get cancelled by the factor using y. Each logarithm describes the left and right behaviours, ln(h) and ln(1 / h) or ln(1 - h). J basically is, in each iteration, the average of the sum of the errors in said iteration. These two logarithms, these two behaviours, have asymptotes in their corresponding error limit. 
 
-![img](11)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/11.png?raw=true)
 
 These function will work based on y so that the gradient descent minimizes it: the fact that each component is a logarithm with an asymptote doesnt mean the function never reaches a slope of zero, it actually does. 
 
@@ -117,7 +117,7 @@ These two components of the J function will be changing **with every data point 
 
 Luckily, the gradient of J(**a**) stays the same because we are using a J function that allows us to still use the Gradient Descent technique:
 
-![img](12)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/12.png?raw=true)
 
 ## Summary & Example
 
@@ -125,4 +125,4 @@ Luckily, the gradient of J(**a**) stays the same because we are using a J functi
 
 - J measures how much y' (predicted) differs from y (correct/known). If J(a) is big, then the derivative dJ(a) also grows, and the adjustment of a in the next iteration will be bigger because it got a big error.
 
-![img](13)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week8/res/13.png?raw=true)
