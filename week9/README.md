@@ -16,7 +16,7 @@ J variable is not a metric for determining the amount of accuracy in the predict
 
 J value then is an error, yes, but does not necessarily mean that the data is wrongly classified. Take this example: image we have a data value that belongs to y = 1 (class 1), and its h(x_i) outputs a 0.9. This 0.9 will give me a value of J, a small one because the probability of belonging to 1 is 0.9, but a value in the end, even though this point is classified correctly according to the rule seen before.
 
-![img](1)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week9/res/1.png?raw=true)
 
 The thing is that if h >= 0.5 and the data point belongs to class 1, the J value will not be zero even though the point is correclty classified. This J will then be accumulated either way: we can classify every data value correclty and still the J value at the end will not be zero.Thus, **J is not an indicator of the accuracy (acceptance/rejection) of the model**, since J is calculated based on h(x_i) which predicts using probabilities. Also, do not expect the Convergence plot completely in zero at y axis as an indicator that the process is finished and accurate. 
 
@@ -28,7 +28,7 @@ The thing is that if h >= 0.5 and the data point belongs to class 1, the J value
 
 The output of this model being a line that separates the two groups, is not unique: there can be infinite lines that give us a correct classification.
 
-![img](2)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week9/res/2.png?raw=true)
 
 ## Forcing errors
 
@@ -39,6 +39,6 @@ beta = 0.00001; % a minimal step
 iter_max = 5; % and too little iterations: we will not arrive at a good solution: error forcing
 ```
 
-![img](errors.png)
+![img](https://github.com/the-other-mariana/ml-intro/blob/master/week9/res/errors.png?raw=true)
 
 *Note: Figure 1 is what it should be (plot according to known **y**) and Figure 3 is what it predicted (plot according to predicted **y** vector).*
