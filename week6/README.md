@@ -8,7 +8,7 @@ In univariate linear regression (ULR), we just had a_0 and a_1.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/01.png?raw=true)
 
-Now, in multivariate linear regression (MLR), we have a vector **a**, which contains a_0, a_1, a_2, ..., a_(n+1), where n is the number of characteristics.
+Now, in multivariate linear regression (MLR), we have a vector **a**, which contains a_0, a_1, a_2, ..., a_n, where n is the number of characteristics.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/02.png?raw=true)
 
@@ -40,7 +40,7 @@ Now, in MLR the Gradient Descent looks very similar, we still update each a_j wi
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/06.png?raw=true)
 
-If we take a look at the derivatives of J(**a**) with respect to a_j, we notice that the only thing that changes between a_j's is the term x_i,j. In other words, if we are doing a_1 for training data i, we will multiply it by x_i,1. j iterates the characteristics and i the training data values.
+If we take a look at the derivatives of J(**a**) with respect to a_j, we notice that the only thing that changes between a_j's is the term x_j. In other words, if we are doing a_1 for training data i, we will multiply it by x_1. j iterates the characteristics and i the training data values.
 
 We will have an a value for each characteristic, if we include x_0 = 1. Thus, for a_0 would be
 
