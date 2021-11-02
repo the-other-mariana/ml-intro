@@ -8,7 +8,7 @@ In univariate linear regression (ULR), we just had a_0 and a_1.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/01.png?raw=true)
 
-Now, in multivariate linear regression (MLR), we have a vector **a**, which contains a_0, a_1, a_2, ..., a_n, where n is the number of characteristics.
+Now, in multivariate linear regression (MLR), we have a vector **a**, which contains a_0, a_1, a_2, ..., a_(n+1), where n is the number of characteristics.
 
 ![img](https://github.com/the-other-mariana/ml-intro/blob/master/week6/res/02.png?raw=true)
 
