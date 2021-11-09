@@ -20,7 +20,7 @@
 
 In this case, a data point belongs to one class or another depending on its values for all its features, in this course, 2.
 
-Logistic Regres starts from the same principle as Linear Regression, but they are not same technique. With the same principle we mean that the **model** is the same, because both output a **line as a model**, the only difference is that in Linear Regression the line is used to approximate y output given an x, and in Logistic Regression the line is used to separate the data.
+Logistic Regression starts from the same principle as Linear Regression, but they are not same technique. With the same principle we mean that the **model** is the same, because both output a **line as a model**, the only difference is that in Linear Regression the line is used to approximate y output given an x, and in Logistic Regression the line is used to separate the data.
 
 The line in a Logistic Regression model is called the **decision line** or **decision limit**. In this way, all data that lies **under** the decision line is classified as class 0 and the data that falls **above** the line would be class 1.
 
