@@ -52,7 +52,7 @@ As we mentioned, the f(v) function transforms v and is thus an activation functi
 
 This step function takes the values -1 and 1, because those are the class values that are chosen. We could as well have used the Unitary Step Function, which touches 0 and 1, but we choose the labels -1 and 1 for the two classes.
 
-![img](res/6.png)
+![img](res/7.png)
 
 *Note: if we have perfectly linearly separable data, the error with this algorithm can be 0.*
 
