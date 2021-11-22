@@ -40,7 +40,7 @@ Neural Networks and Machine Learning are two different disciplines from Artifici
 
 Now, the Machine Learning algorithm are now **Learning Rules**, and these are proper from the Neural Network area. This will output as a **model** a **neural network**.
 
-Neural Networks are classified depending on how their structured is. Neural networks are constituted from **neurons**, which are **each node in the network diagram.**
+Neural Networks are classified depending on how their structure is. Neural networks are constituted from **neurons**, which are **each node in the network diagram.**
 
 ![img](res/5.png)
 
@@ -52,7 +52,7 @@ A Neural Network will always have:
 
 - **Output Layer**: Can be constituted from one or more neurons, depending on how many output points we need, and in the case of classification problems, will be the **predicted class**. In these problems, we would need only **one neuron that outputs either 0 or 1**  depending on the data point belonging to one class or the other.
 
-The input and other nuerons are connected to other nodes or neurons via an arrow, which simulates the brain's connections. This connections have an associated **weight**.
+The input and other neurons are connected to other nodes or neurons via an arrow, which simulates the brain's connections. This connections have an associated **weight**.
 
 Thus, we classify a neural network (NN) depending on how many **hidden layers** the network has:
 
