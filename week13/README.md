@@ -4,7 +4,7 @@
 
 It is important to note that the weights are updated taking on account the current weight but also a **learning factor a** times the data input point that generated **error**. The learning factor **a** is a constant value that is a configuration parameter that is fixed from the beginning of the learning process.
 
-The value *a* is one for each data set, and it varies between the range of [-1,1], approximately. It is similar to **beta** parameter is Linear Regression and Logistic Regression, but now if **a** is either **too small or too big the solution never converges**, whereas a small beta meant a slow convergence and a big beta meant not convergence.
+The value *a* is one for each data set, and it varies between the range of [-1,1], approximately. It is similar to **beta** parameter in Linear Regression and Logistic Regression, but now if **a** is either **too small or too big the solution never converges**, whereas a small beta meant a slow convergence and a big beta meant not convergence.
 
 - The perceptron algorithm is not an optimization problem, since there is not cost function to minimize.
 
