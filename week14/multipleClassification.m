@@ -15,6 +15,7 @@ X = zscore(X);
 
 % get the number of classes
 numClass = numel(unique(Y));
+% codified output matrix (list of vectors)
 D = zeros(m, numClass);
 for i=1:m
   D(i, Y(i)) = 1;

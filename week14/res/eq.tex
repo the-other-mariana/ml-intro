@@ -1,0 +1,31 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\begin{document}
+
+
+
+\begin{equation}
+\newline W_1=\begin{bmatrix}
+w^{(1)}_{11}&w^{(1)}_{12}\\ 
+w^{(1)}_{21}&w^{(1)}_{22}
+\end{bmatrix}
+\newline X^{i} = \begin{bmatrix}x_1\\ x_2\end{bmatrix}
+\newline V^{(1)} = \begin{bmatrix}v_1^{(1)}\\v_2^{(1)}\end{bmatrix} = W_1X^{i}
+\newline Y^{(1)} = \begin{bmatrix}y_1^{(1)}\\y_2^{(1)}\end{bmatrix} = \varphi (V^{(1)})
+\end{equation}
+
+\begin{equation}
+\newline W_2=\begin{bmatrix}
+w^{(2)}_{11}&w^{(2)}_{12}\\ 
+w^{(2)}_{21}&w^{(2)}_{22}
+\end{bmatrix}
+\newline V = \begin{bmatrix}v_1\\v_2\end{bmatrix} = W_2Y^{(1)}
+\newline Y = \begin{bmatrix}y_1\\y_2\end{bmatrix} = \varphi (V) 
+\end{equation}
+
+\begin{equation}
+\newline y^{(1)}=\varphi(v^{(1)}) = \frac{1}{1+e^{-v^{(1)}}} = Sigmoid
+\newline y=\varphi(v) = \frac{e^v}{\sum^M_{k=1}{e^vk}} = Softmax
+\end{equation}
+
+ \end{document}
